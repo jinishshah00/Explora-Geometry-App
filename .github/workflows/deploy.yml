@@ -33,7 +33,8 @@ jobs:
 
       # 6. Build the Flutter Web App (Release Mode)
       - name: Build Flutter Web
-        run: flutter build web --release
+        run: flutter build web --release --base-href="/Explora-Geometry-App/"
+
 
       # 7. Deploy to GitHub Pages using peaceiris/actions-gh-pages
       - name: Deploy to GitHub Pages
