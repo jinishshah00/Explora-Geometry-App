@@ -1,0 +1,48 @@
+name: Flutter Web Deploy
+
+on:
+  push:
+    branches:
+      - main    # Change to your primary branch if needed
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest   # Ubuntu runner includes Chrome by default
+    
+    steps:
+      # 1. Check Out the Repository Code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # 2. Set Up Flutter with the Specified Version
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.0'
+      
+      # 3. Enable Web Support in Flutter
+      - name: Enable Flutter Web
+        run: flutter config --enable-web
+
+      # 4. Get Dependencies
+      - name: Get Flutter Packages
+        run: flutter pub get
+
+      # 5. Run Tests in Chrome Environment
+      # This uses Chrome to run tests; ensure your tests are written for web.
+      - name: Run Flutter Tests on Chrome
+        run: flutter test --platform chrome
+
+      # 6. Build the Flutter Web App (Release Mode)
+      - name: Build Flutter Web
+        run: flutter build web --release
+
+      # 7. Deploy to GitHub Pages using peaceiris/actions-gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/web
