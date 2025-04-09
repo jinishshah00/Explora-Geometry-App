@@ -1,0 +1,91 @@
+# =====================
+# Miscellaneous Files
+# =====================
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# =====================
+# IntelliJ/Android Studio
+# =====================
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# =====================
+# VS Code (Optional)
+# =====================
+# The .vscode folder contains personal launch configurations and tasks.
+#.vscode/
+
+# =====================
+# Flutter, Dart, and Pub Related
+# =====================
+# Documentation API outputs (auto-generated)
+**/doc/api/
+# Flutter iOS last build ID (auto-generated)
+**/ios/Flutter/.last_build_id
+# Dart tool directory (cache, build info, etc.)
+.dart_tool/
+# Flutter plugin files
+.flutter-plugins
+.flutter-plugins-dependencies
+# Dart and Pub cache directories
+.pub-cache/
+.pub/
+# Project build output
+/build/
+
+# =====================
+# Symbolication and Obfuscation (for Crash Reports and Mapping Files)
+# =====================
+app.*.symbols
+app.*.map.json
+
+# =====================
+# Android Specific Build Artifacts
+# =====================
+/android/app/debug
+/android/app/profile
+/android/app/release
+# Additionally, ignore local Gradle settings (if present)
+android/.gradle/
+local.properties
+
+# =====================
+# iOS Specific Files (Additional)
+# =====================
+# CocoaPods dependencies (auto-generated at build time)
+ios/Pods/
+# iOS build output
+ios/build/
+# Uncomment if you want to ignore Xcode workspace settings
+# ios/Runner.xcworkspace/
+
+# =====================
+# Desktop Platforms (if applicable)
+# =====================
+# macOS
+macos/Flutter/ephemeral
+macos/build/
+# Windows
+windows/flutter/ephemeral
+windows/build/
+# Linux
+linux/flutter/ephemeral
+linux/build/
+
+# =====================
+# Optional: Pubspec Lock File
+# =====================
+# For Flutter applications, you might choose to commit pubspec.lock to ensure dependency consistency.
+# If you decide to ignore it, uncomment the following line:
+pubspec.lock
