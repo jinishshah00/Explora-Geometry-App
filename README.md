@@ -102,9 +102,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 **Jinish Shah**  
 🎓 M.S. in Computer Science – Santa Clara University  
-🔗 [GitHub](https://github.com/jinishshah00) | [LinkedIn](https://www.linkedin.com/in/jinishshah00)
+🔗 [GitHub](https://github.com/jinishshah00) | [LinkedIn](https://www.linkedin.com/in/shahjinish/)
 
 ---
-```
 
----
